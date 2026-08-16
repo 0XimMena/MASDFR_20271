@@ -1,0 +1,49 @@
+# ==========================================================================
+#  Ambiente del curso — MASDFR
+#  Matemáticas Actuariales para Seguro de Daños, Fianzas y Reaseguro
+#  Facultad de Ciencias, UNAM
+#
+#  Crear:    conda env create -f environment.yml
+#  Activar:  conda activate MASDFR
+#  Kernel:   python -m ipykernel install --user --name MASDFR
+# ==========================================================================
+name: MASDFR
+
+channels:
+  - conda-forge
+
+dependencies:
+  # --- Núcleo científico ---------------------------------------------------
+  - python=3.11
+  - numpy
+  - pandas
+  - scipy
+  - matplotlib
+  - seaborn
+
+  # --- Modelado estadístico y tarificación --------------------------------
+  - statsmodels
+  - scikit-learn
+  - glum            # GLM para tarificación (Tema 2)
+
+  # --- Entorno de notebooks -----------------------------------------------
+  - jupyterlab
+  - notebook
+  - ipykernel
+
+  # --- Lectura/escritura de datos -----------------------------------------
+  - openpyxl        # Excel .xlsx
+  - xlrd            # Excel .xls
+  - pyarrow         # parquet / IO rápido
+
+  # --- Utilidades ----------------------------------------------------------
+  - plotly          # gráficas interactivas
+  - tqdm            # barras de progreso
+  - requests        # descargar datos
+
+  # --- Paquetes solo por pip ----------------------------------------------
+  - pip
+  - pip:
+      - fitter        # ajuste automático de distribuciones (severidad)
+      - chainladder   # reservas / IBNR (por si se ocupa desde Python)
+      - lifelines     # análisis de supervivencia
