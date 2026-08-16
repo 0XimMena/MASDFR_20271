@@ -75,8 +75,5 @@ Si todo está en verde, tu entorno quedó listo para la Sesión 2.
 
 ```bash
 git pull                      # traer lo último antes de empezar
-# ...trabajas en tus notebooks...
-git add .
-git commit -m "describe tu cambio"
-git push                      # subir tu trabajo
+               # subir tu trabajo
 ```
